@@ -13,12 +13,19 @@
         color: #424242;
         line-height: 1.5;
       }
+      .list {
+        display: flex;
+      }
+      .list__item {
+        flex-basis: calc(100% / 3);
+        
+      }
     </style>
   </head>
   <body>
     <p><a href="index.html">На главную</a></p>
 
-    <ul id="gallery"></ul>
+    <ul id="gallery" class="list"></ul>
 
     <script src="js/task-03.js" type="module"></script>
   </body>
