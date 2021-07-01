@@ -13,19 +13,31 @@
         color: #424242;
         line-height: 1.5;
       }
-      .list {
-        display: flex;
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
       }
+      .list {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin-left: -20px;
+        padding: 0;
+        /*outline: solid 1px tomato;*/
+      }
+
       .list__item {
-        flex-basis: calc(100% / 3);
-        
+        margin-left: 20px;
+        flex-basis: calc(100% / 3 - 20px);
+        /*outline: solid 1px rgb(141, 71, 255);*/
       }
     </style>
   </head>
   <body>
     <p><a href="index.html">На главную</a></p>
 
-    <ul id="gallery" class="list"></ul>
+    <ul id="gallery" class="list gallery__list"></ul>
 
     <script src="js/task-03.js" type="module"></script>
   </body>

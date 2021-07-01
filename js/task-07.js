@@ -3,7 +3,19 @@ console.log(inputElem);
 
 const textElem = document.querySelector('#text');
 console.log(textElem);
-// textElem.style.fontSize ='30px';
+
+console.log(inputElem.value);
+inputElem.addEventListener('input', function() {            
+        text.style.fontSize = inputElem.value + 'px'           
+});
+console.log(inputElem.value);
+
+
+
+
+      //=================================
+
+      // textElem.style.fontSize ='30px';
 // textElem.style.backgroundColor = 'teal';
 // textElem.style.fontSize = '16px';
 // const a = textElem.style.fontSize;
@@ -40,9 +52,3 @@ console.log(textElem);
     
     
 //}
-console.log(inputElem.value);
-inputElem.addEventListener('input', function() {            
-        text.style.fontSize = inputElem.value + 'px'           
-});
-      console.log(inputElem.value);
-//onInputChange
