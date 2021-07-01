@@ -1,12 +1,33 @@
 const getInput = document.querySelector('#validation-input');
 
-getInput.addEventListener('input', onFormInput);
+const getDataLength = Number(getInput.getAttribute('data-length'));
 
-function onFormInput()
+const inputIsValid = getInput.addEventListener('focus', onFormInput);
 
-console.log(getInput);
-//if ()
-//const a = getInput.formData
-const formData = new FormData();
+function onFormInput(event) {
 
-  console.log(formData);
+  const getInputValue = event.currentTarget.value;
+
+  if (getInputValue.length === getDataLength) {
+    getInput.classList.add('valid');
+    getInput.classList.remove('invalid');
+  }
+  else {
+    getInput.classList.remove('valid');
+    getInput.classList.add('invalid');
+  }
+};
+
+// console.log(getInput);
+
+// // getInput.classList.add('valid');
+
+// console.log(getInput.getAttribute('data-length'));
+
+//=============== было внутри функции
+ // console.dir(event.currentTarget);
+  // 
+  // console.dir(getInputValue);
+  // console.log(getInputValue.length);
+  // console.log(getDataLength);
+  // console.log(getInputValue.length === getDataLength);
