@@ -27,6 +27,7 @@ const createBoxes = (amount) => {
         elem.style.margin = '5px';
         elem.style.borderStyle = 'solid';
         elem.style.borderColor = '#a0a0a0';
+        elem.classList = 'box-element';
         boxesElem.appendChild(elem);
     }
     //return console.log(boxesElem);
