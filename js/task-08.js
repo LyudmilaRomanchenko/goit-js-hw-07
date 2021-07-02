@@ -37,18 +37,14 @@ const createBoxes = (amount) => {
     //return console.log(boxesElem);
 }
 
-const onInputQuantity = () => {
-   renderElem.addEventListener('click', onCreateElem);
-}
-
-inputElem.addEventListener('input', onInputQuantity);
-
 const onCreateElem = () => {
     const amount = Number(inputElem.value);
     createBoxes(amount);
     //console.log(amount);
     //console.log('Создать');
 }
+
+renderElem.addEventListener('click', onCreateElem);
 
 const onDestroyElem = () => {
     boxesElem.textContent = '';
@@ -84,6 +80,14 @@ destroyElem.addEventListener('click', onDestroyElem);
 
 
 /////////////////////////////// ПРОБЫ ///////////////////////////////////////////////////////////////////////
+
+
+// const onInputQuantity = () => {
+//    renderElem.addEventListener('click', onCreateElem);
+// }
+
+// inputElem.addEventListener('input', onInputQuantity);
+
 // while (amount > 0) {
     //     console.log(amount);
     //      elem = document.createElement('div');
