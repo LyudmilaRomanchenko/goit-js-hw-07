@@ -6,10 +6,15 @@ console.log(textElem);
 
 console.log(inputElem.value);
 inputElem.addEventListener('input', function() {            
-        text.style.fontSize = inputElem.value + 'px'           
+    text.style.fontSize = `${inputElem.value * 0.32}px`;
 });
 console.log(inputElem.value);
-
+//=========================================================== Решение ментора =======================
+// const inputRef = document.querySelector('#font-size-control');
+// const textRef = document.querySelector('#text');
+// inputRef.addEventListener('input', event => {
+//   textRef.style.fontSize = `${event.target.value}px`;
+// });
 
 
 
