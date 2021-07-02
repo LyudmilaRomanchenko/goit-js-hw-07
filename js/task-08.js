@@ -8,6 +8,7 @@ const boxesElem = document.querySelector('#boxes');
 console.log(boxesElem);
 
 const createBoxes = (amount) => {
+    const arrayElem = [];
     for (let i = 0; i < amount * 10; i += 10) {
         const randomColor = () => {
             let col = Math.round(255.0*Math.random());
@@ -28,8 +29,11 @@ const createBoxes = (amount) => {
         elem.style.borderStyle = 'solid';
         elem.style.borderColor = '#a0a0a0';
         elem.classList = 'box-element';
-        boxesElem.appendChild(elem);
+        arrayElem.push(elem);
+        //boxesElem.appendChild(elem);
     }
+    console.log(arrayElem);
+    boxesElem.append(...arrayElem);
     //return console.log(boxesElem);
 }
 
