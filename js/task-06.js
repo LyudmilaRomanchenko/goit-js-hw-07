@@ -17,17 +17,3 @@ function onFormInput(event) {
     getInput.classList.add('invalid');
   }
 };
-
-// console.log(getInput);
-
-// // getInput.classList.add('valid');
-
-// console.log(getInput.getAttribute('data-length'));
-
-//=============== было внутри функции
- // console.dir(event.currentTarget);
-  // 
-  // console.dir(getInputValue);
-  // console.log(getInputValue.length);
-  // console.log(getDataLength);
-  // console.log(getInputValue.length === getDataLength);

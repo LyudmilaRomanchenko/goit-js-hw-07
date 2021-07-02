@@ -15,19 +15,11 @@ const ingredientsCallBack = item => {
   return elem;
 };
 
-// ========================
-// const createIngredients = ingredients.reduce((acc, ingredient) =>
-//   acc + ingredientsCallBack(ingredient), "");
-
-// console.log(createIngredients);
-
-// ============================
 const createIngredients = ingredients.map(ingredient =>
   ingredientsCallBack(ingredient));
 
 
 console.log(createIngredients);
-
 
 ingredientsList.append(...createIngredients);
 

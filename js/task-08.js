@@ -7,46 +7,90 @@ console.log(destroyElem);
 const boxesElem = document.querySelector('#boxes');
 console.log(boxesElem);
 
-//============================ Работает ====================================
-let elem = 0;
 const createBoxes = (amount) => {
-    while (amount > 0) {
-        console.log(amount);
-         elem = document.createElement('div');
-        elem.style.width = '300px';
-        elem.style.height = '100px';
-        elem.style.backgroundColor = 'teal';
+    for (let i = 0; i < amount * 10; i += 10) {
+        const randomColor = () => {
+            let col = Math.round(255.0*Math.random());
+            const r = col.toString(16);
+            col = Math.round(255.0*Math.random());
+            const g=col.toString(16);
+            col = Math.round(255.0*Math.random());
+            const  d=col.toString(16);
+            col=r+g+d;
+            return col;
+        }
+       let elem = document.createElement('div');
+        elem.style.width = `${30+i}px`;
+        elem.style.height = `${30+i}px`;
+        elem.style.backgroundColor = `#${randomColor()}`;
         elem.style.borderRadius = '10px';
-        elem.style.borderStyle = 'double';
-        elem.style.borderColor = 'tomato';
+        elem.style.margin = '5px';
+        elem.style.borderStyle = 'solid';
+        elem.style.borderColor = '#a0a0a0';
         boxesElem.appendChild(elem);
-        amount -= 1;
     }
-    return console.log(boxesElem);
-    
-}
-
-const onCreateBoxes = () => {
-    const amount = Number(inputElem.value);
-    console.log(amount);
-    createBoxes(amount);
-    //return console.log('Создать');
+    //return console.log(boxesElem);
 }
 
 const onInputQuantity = () => {
-   renderElem.addEventListener('click', onCreateBoxes);
+   renderElem.addEventListener('click', onCreateElem);
 }
 
 inputElem.addEventListener('input', onInputQuantity);
 
-const onDestroyElem = () => {
-    //return console.log('Очистить');
-    elem.remove();
+const onCreateElem = () => {
+    const amount = Number(inputElem.value);
+    createBoxes(amount);
+    //console.log(amount);
+    //console.log('Создать');
+}
 
+const onDestroyElem = () => {
+    boxesElem.textContent = '';
+    //console.log('Очистить');
 }
 
 destroyElem.addEventListener('click', onDestroyElem);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////// ПРОБЫ ///////////////////////////////////////////////////////////////////////
+// while (amount > 0) {
+    //     console.log(amount);
+    //      elem = document.createElement('div');
+    //     elem.style.width = '300px';
+    //     elem.style.height = '100px';
+    //     elem.style.backgroundColor = 'teal';
+    //     elem.style.borderRadius = '10px';
+    //     elem.style.borderStyle = 'double';
+    //     elem.style.borderColor = 'tomato';
+    //     boxesElem.appendChild(elem);
+    //     amount -= 1;
+    // }
 
 // const onCreateBoxes = (event) => {
 //     //return console.log('Создать');
