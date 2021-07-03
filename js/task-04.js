@@ -11,11 +11,9 @@ const btnDecrement = document.querySelector('[data-action="decrement"]');
 //console.log(btnIncrement, btnDecrement);
 
 const increment = () => {
-    for (let i = 0; i !== undefined; i += 1) {
-        counterValue += 1;
-        console.log(counterValue);
-        return spanElem.textContent = `${counterValue}`;
-    }
+    counterValue += 1;
+    console.log(counterValue);
+    spanElem.textContent = `${counterValue}`;
 };
 
 const decrement = () => {
