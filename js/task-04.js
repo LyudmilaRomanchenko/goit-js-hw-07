@@ -19,11 +19,9 @@ const increment = () => {
 };
 
 const decrement = () => {
-    for (let i = 0; i !== undefined; i += 1) {
-        counterValue -= 1;
-        console.log(counterValue);
-        return spanElem.textContent = `${counterValue}`;
-    }
+    counterValue -= 1;
+    console.log(counterValue);
+    spanElem.textContent = `${counterValue}`;
 }
 
 const btnIncrementEvent = btnIncrement.addEventListener('click', increment);
