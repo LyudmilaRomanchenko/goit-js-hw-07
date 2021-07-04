@@ -2,7 +2,7 @@ const getInput = document.querySelector('#validation-input');
 
 const getDataLength = Number(getInput.getAttribute('data-length'));
 
-const inputIsValid = getInput.addEventListener('input', onFormInput);
+const inputIsValid = getInput.addEventListener('blur', onFormInput);
 
 function onFormInput(event) {
 
